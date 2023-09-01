@@ -25,6 +25,12 @@ console.log(headerTitle.innerText);
 headerTitle.innerHTML = '<h3>Hello</h3>';
 headerTitle.style.borderBottom = 'solid 3px #000000';
 
+var mainTitle = document.querySelector('#main h2.title');
+
+// Apply the desired styles
+mainTitle.style.fontWeight = 'bold';
+mainTitle.style.color = 'green';
+
 
 
         // Get Element By Class Name //
