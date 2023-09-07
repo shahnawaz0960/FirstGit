@@ -13,9 +13,12 @@
         <script>
             function saveToLocalStorage(event) {
                 event.preventDefault();
+                console.log('form submitted');
                 const name = event.target.username.value;
                 const email = event.target.emailId.value;
                 const phonenumber = event.target.phonenumber.value;
+                
+                let userArray = JSON.parse(localStorage.getItem('userDetails')) || [];
                 
                 // Create an object to store user details
                 const userDetails = {
@@ -24,8 +27,9 @@
                     phonenumber: phonenumber,
 
                 };
+                userArray.push(userDetails);
                 
-                localStorage.setItem('userDetails', JSON.stringify(userDetails));
+                localStorage.setItem('userDetails', JSON.stringify(userArray));
             }
         </script>
     </body>
