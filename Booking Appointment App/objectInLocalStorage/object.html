@@ -10,6 +10,9 @@
             <button> Submit </button>
             <link rel="icon" href="data:;base64,iVBORw0KGgo=">
         </form>
+
+        
+
         <script>
             function saveToLocalStorage(event) {
                 event.preventDefault();
@@ -30,6 +33,8 @@
                 userArray.push(userDetails);
                 
                 localStorage.setItem('userDetails', JSON.stringify(userArray));
+            
+            
             }
         </script>
     </body>
